@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de formulario de contacto</title>
+  
+  <!-- Enlaza el archivo CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- Botón de contacto -->
+  <button id="contact-btn" class="btn btn-primary">Contáctanos</button>
+
+  <!-- Modal de contacto -->
+  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="contact-modal-label">Formulario de contacto</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Aquí se cargará el formulario -->
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono">
+            </div>
+            <div class="form-group">
+              <label for="ciudad">Ciudad</label>
+              <input type="text" class="form-control" id="ciudad" placeholder="Ingresa tu ciudad">
+            </div>
+            <div class="form-group">
+              <label for="provincia">Provincia</label>
+              <select class="form-control" id="provincia" name="provincia">
+                <option value="" selected>Selecciona una provincia</option>
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Catamarca">Catamarca</option>
+                <option value="Chaco">Chaco</option>
+                <option value="Chubut">Chubut</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Corrientes">Corrientes</option>
+                <option value="Entre Ríos">Entre Ríos</option>
+                <option value="Formosa">Formosa</option>
+                <option value="Jujuy">Jujuy</option>
+                <option value="La Pampa">La Pampa</option>
+                <option value="La Rioja">La Rioja</option>
+                <option value="Mendoza">Mendoza</option>
+                <option value="Misiones">Misiones</option>
+                <option value="Neuquén">Neuquén</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Salta">Salta</option>
+                <option value="San Juan">San Juan</option>
+                <option value="San Luis">San Luis</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Santa Fe">Santa Fe</option>
+                <option value="Santiago del Estero">Santiago del Estero</option>
+                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                <option value="Tucumán">Tucumán</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="date" class="form-control" id="fecha" required min="1900-01-01" max="2004-12-31">
+            </div>
+            
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="mayor-de-edad" required>
+              <label class="form-check-label" for="mayor-de-edad">Soy mayor de 18 años</label>
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="5" placeholder="Ingresa tu mensaje" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+            <!-- Enlaza los archivos de JavaScript de Bootstrap y jQuery -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+            
+            <!-- Script para cargar el formulario en el modal -->
+            <script>
+            $(document).ready(function() {
+              $("#contact-btn").click(function() {
+                $("#contact-modal").modal("show");
+              });
+            });
+            </script>
+            </body>
+            </html>
