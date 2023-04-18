@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     height: 100%;
+    padding: 16px;
+    margin-left: 40px;
+    
+}
+
+.airplane_img{
+    width: 20vh;
+    height: 20vh;
+    
+}
+
+.personal{
+    width: 150px;
+    height: 110px;
+    border-radius: 50%;  
+    margin: 3em;
+}
+
+.servicioNacional,.servicioInternacional,.servicioTransporte{
+    width: 100%;
+    height: 40vh;
+}
+
+.servicioNacional{
+    background-image: url("images/cerro.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+
+.servicioInternacional{
+    background-image: url("images/viajes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.servicioTransporte{
+    background-image: url("images/transporte.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+
+@media all and (max-width:767px) and (min-width:524px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width:727px){
+   #destinos{
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+   }
+    .card{
+    width: 95% !important;
+    
+   }
+}
+
+@media all and (max-width:380px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navegacion{
+        display: flex;
+        flex-direction:column;
+    }
+    .navegacion ul li a{
+        text-align: center;
+    }
+}
